@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>hexo - fast blog build</title>
+    <url>/2020/02/29/hexo-fast-blog-build/</url>
+    <content><![CDATA[<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 在本地启动服务器</span></span><br><span class="line">hexo server </span><br><span class="line"><span class="meta">#</span><span class="bash"> 新建文章，默认在_post文件夹里新建一个md文件</span></span><br><span class="line">hexo new "filename"</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> NexT主题</span></span><br><span class="line">cd your-hexo-site</span><br><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>Developer</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mac Terminal Line</title>
+    <url>/2020/02/28/Mac-Terminal-Line/</url>
+    <content><![CDATA[<h1 id="符号"><a href="#符号" class="headerlink" title="符号"></a>符号</h1><p>⌘（command）、⌥（option/alt）、⇧（shift）、⌃（control）、⎋（esc）</p>
+<h1 id="下载m3u8视频"><a href="#下载m3u8视频" class="headerlink" title="下载m3u8视频"></a>下载m3u8视频</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> filename.mp4是自定义文件名</span></span><br><span class="line">ffmpeg -i https://xxx.m3u8 'filename.mp4'</span><br></pre></td></tr></table></figure>
+
+<h1 id="制作树莓派映像u盘"><a href="#制作树莓派映像u盘" class="headerlink" title="制作树莓派映像u盘"></a>制作树莓派映像u盘</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 查看外接u盘信息</span></span><br><span class="line">diskutil list</span><br><span class="line"><span class="meta">#</span><span class="bash"> 卸载之后再写入，diskname为查询到的u盘挂载名字</span></span><br><span class="line">diskutil umountDisk /dev/diskname</span><br><span class="line"><span class="meta">#</span><span class="bash"> 写入</span></span><br><span class="line">sudo dd bs=1m if=/path/raspbian-buster-lite.img of=/dev/rdiskname conv=sync</span><br><span class="line"><span class="meta">#</span><span class="bash"> 弹出u盘</span></span><br><span class="line"> sudo diskutil eject /dev/diskname</span><br></pre></td></tr></table></figure>
+
+<h1 id="显示-隐藏文件"><a href="#显示-隐藏文件" class="headerlink" title="显示/隐藏文件"></a>显示/隐藏文件</h1><p>方法1:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 显示文件</span></span><br><span class="line">defaults write com.apple.Finder AppleShowAllFiles YES</span><br><span class="line"><span class="meta">#</span><span class="bash"> 隐藏文件</span></span><br><span class="line">defaults write com.apple.Finder AppleShowAllFiles NO</span><br></pre></td></tr></table></figure>
+
+<p> 方法2:</p>
+<p>在Finder下按<code>command⌘</code>+<code>shift⇧</code>+<code>.</code></p>
+<h1 id="网速测试"><a href="#网速测试" class="headerlink" title="网速测试"></a>网速测试</h1><p>如下三种方式</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 或者sudo apt install speedtest-cli</span></span><br><span class="line">sudo pip3 install speedtest-cli</span><br><span class="line"><span class="meta">#</span><span class="bash"> 获取上传和下载速度</span></span><br><span class="line">speedtest</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Netflix 提供的服务，网址是 fast.com</span></span><br><span class="line">npm install --global fast-cli </span><br><span class="line">fast -u #获取上传和下载速度</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> ipref 测试局域网速度 https://iperf.fr/</span></span><br><span class="line">sudo apt install iperf #安装完成后，你需要在同一网络上的两台计算机上使用它（两台都必须安装 iPerf）。指定其中一台作为服务器。获取服务端计算机的 IP 地址：</span><br><span class="line">ip addr show | grep inet.*brd</span><br><span class="line">iperf -s #在服务端启动 iperf</span><br><span class="line">iperf -c 192.168.1.2 #它会等待来自客户端的传入连接。将另一台计算机作为为客户端并运行此命令，将示例中的 IP 替换为服务端计算机的 IP</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Developer</tag>
+      </tags>
+  </entry>
+</search>
