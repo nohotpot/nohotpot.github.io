@@ -1,6 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Website collection</title>
+    <url>/2020/03/02/Website-collection/</url>
+    <content><![CDATA[<h1 id="Software"><a href="#Software" class="headerlink" title="Software"></a>Software</h1><h2 id="Mac-software"><a href="#Mac-software" class="headerlink" title="Mac software"></a>Mac software</h2><ul>
+<li><a href="https://www.inpandora.com/" target="_blank" rel="noopener">inpandora</a></li>
+</ul>
+<blockquote>
+<p>mac破解软件🔥</p>
+</blockquote>
+<ul>
+<li><a href="https://xclient.info/" target="_blank" rel="noopener">xclient</a></li>
+</ul>
+<blockquote>
+<p>mac破解软件🔥</p>
+</blockquote>
+<h1 id="Movie"><a href="#Movie" class="headerlink" title="Movie"></a>Movie</h1><ul>
+<li><a href="https://www.meijutt.tv" target="_blank" rel="noopener">美剧天堂</a></li>
+</ul>
+<blockquote>
+<p>更新快，下载类，资源不错</p>
+</blockquote>
+<ul>
+<li><a href="http://1090ys.com" target="_blank" rel="noopener">1090s</a></li>
+</ul>
+<blockquote>
+<p>经常挂站，在线看电影</p>
+</blockquote>
+<ul>
+<li><a href="https://cn.gimy.tv" target="_blank" rel="noopener">gimy tv</a></li>
+</ul>
+<blockquote>
+<p>在线电影美剧，加载慢</p>
+</blockquote>
+<ul>
+<li><a href="https://www.zxzj.me" target="_blank" rel="noopener">在线之家</a></li>
+</ul>
+<blockquote>
+<p>在线电影美剧，加载慢</p>
+</blockquote>
+<ul>
+<li><a href="https://www.themoviedb.org" target="_blank" rel="noopener">themoviedb</a></li>
+</ul>
+<blockquote>
+<p>电影评分网站，类似imdb和豆瓣，ui清爽🔥</p>
+</blockquote>
+<h1 id="Navigation"><a href="#Navigation" class="headerlink" title="Navigation"></a>Navigation</h1><ul>
+<li>[龙轩导航]</li>
+</ul>
+<blockquote>
+<p>影视类，bt类导航不错🔥</p>
+</blockquote>
+<h1 id="File-send"><a href="#File-send" class="headerlink" title="File send"></a>File send</h1><ul>
+<li><a href="https://cowtransfer.com" target="_blank" rel="noopener">奶牛快传</a></li>
+</ul>
+<blockquote>
+<p>传输文件，速度很快且稳定🔥</p>
+</blockquote>
+<ul>
+<li><a href="https://send.firefox.com" target="_blank" rel="noopener">firefox send</a></li>
+</ul>
+<blockquote>
+<p>登录之后支持传输最大2.5g的文件,上传速度很慢，会出错</p>
+</blockquote>
+<h1 id="VPN"><a href="#VPN" class="headerlink" title="VPN"></a>VPN</h1><ul>
+<li><a href="https://my.cerium.world" target="_blank" rel="noopener">blinkload</a>🔥</li>
+</ul>
+<h1 id="Develop"><a href="#Develop" class="headerlink" title="Develop"></a>Develop</h1><h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><p><a href="https://easyhexo.com" target="_blank" rel="noopener">安装 Hexo | Easy Hexo 👨‍💻</a></p>
+<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p><a href="http://iissnan.com/progit/" target="_blank" rel="noopener">pro git</a></p>
+]]></content>
+      <tags>
+        <tag>Collection</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo - fast blog build</title>
     <url>/2020/02/29/hexo-fast-blog-build/</url>
     <content><![CDATA[<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 在本地启动服务器</span></span><br><span class="line">hexo server </span><br><span class="line"><span class="meta">#</span><span class="bash"> 新建文章，默认在_post文件夹里新建一个md文件</span></span><br><span class="line">hexo new "filename"</span><br></pre></td></tr></table></figure>
