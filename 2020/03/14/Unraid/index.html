@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Unraid · noHotpot</title><meta name="description" content="Unraid - Yc"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/nine.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://nohotpot.github.io/atom.xml" title="noHotpot"><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="noHotpot" type="application/atom+xml">
+</head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/nine.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="http://instagram.com/no_hotpot" target="_blank" class="nav-list-link">INSTAGRAM</a></li><li class="nav-list-item"><a href="https://github.com/gitjohnhub" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="https://gitjohnhub.github.io" target="_blank" class="nav-list-link">网盘</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">Unraid</h1><div class="post-info">Mar 14, 2020</div><div class="post-content"><h1 id="Unraid折腾小记"><a href="#Unraid折腾小记" class="headerlink" title="Unraid折腾小记"></a>Unraid折腾小记</h1><h2 id="Unraid-是什么？"><a href="#Unraid-是什么？" class="headerlink" title="Unraid 是什么？"></a>Unraid 是什么？</h2><p>类似freenas，群晖或者威联通，nas全称是network attached storage，网路附属存储，简单来说你可以用它构建家庭数据中心，奈何国内使用Unraid的人太少，遇到很多坑，在这里记录一下解决方案。<br>想象一下在ipad上看到一半的想要在windows电脑或者电视盒子上观看，如果把视频拷贝过去是多此一举的，如果设置一块共享的数据硬盘，让家中所有设备都可以访问，减少数据冗余，也节省了很多步骤</p>
+<h2 id="Unraid-优缺点"><a href="#Unraid-优缺点" class="headerlink" title="Unraid 优缺点"></a>Unraid 优缺点</h2><ul>
+<li>x86_64架构的电脑基本都可以运行Unraid，也就是能装windows的基本可以，如果你正好有一个闲置电脑，很适合搭建Unraid</li>
+<li>有容错机制，如果设置了多块硬盘，可以将其中一块当作备份盘，即使一块硬盘坏了，数据也可以恢复</li>
+<li>搭建类似Plex的家庭媒体中心非常方便，Plex是一种家庭媒体解决方案，可以很方便的多设备观看，下文会教你如何搭建。</li>
+<li>可以在Unraid中搭建虚拟机（虚拟机是一种在你电脑里模拟完整系统的软件，你可以在虚拟中创建windows系统，Linux系统等等），尤其是Unraid支持显卡cpu直通（有些虚拟机不支持直通，显卡是模拟出来的，性能会差很多），直通之后理论上在虚拟中运行系统和直接运行系统没有本质差别，性能一样，而且你可以设置多个虚拟机，甚至可以安装黑苹果（黑苹果：由于苹果电脑的机制，通常无法在其他设备安装苹果系统，你只能买一台mac电脑运行苹果系统，但是，万能的网友通过各种方法，已经可以将苹果系统安装在特定的某些机器上，虚拟机也可以搭建。）</li>
+<li>上手比较简单，界面美观（国内一般使用群晖或者威联通作为nas解决方案，功能可以，但是界面太丑了）</li>
+<li>缺点，死贵，如果你附属3块硬盘，需要59美刀，但是它提供了30天试用期，够我玩一阵了，当然在天朝这种地方，只要你与google或者百度达成战略合作，总能搜的到那种你懂的免费使用的Unraid</li>
+</ul>
+<h2 id="安装下载"><a href="#安装下载" class="headerlink" title="安装下载"></a>安装下载</h2><p>官网：<a href="https://unraid.net" target="_blank" rel="noopener">https://unraid.net</a><br>从官网介绍中可以看到，Unraid实际上是一种运行在u盘里的Linux操作系统，让你对系统硬件有完整的控制。点击windows下载按照提示写入u盘就可以了（不推荐用mac写入u盘，之后设置windows虚拟机时会出现黑屏，无法安装等莫名其妙的情况）<br>然后开机进入BIOS，设置为U盘启动，系统就从u盘运行Unraid了。</p>
+<h2 id="激活30天试用"><a href="#激活30天试用" class="headerlink" title="激活30天试用"></a>激活30天试用</h2><p>首先需要在两个地方设置一下时间，一个是Unraid操作系统里，设置国内aliyun的服务器校准时间，然后重启进入BIOS，确保BIOS里时间也相同，然后进入Unraid激活试用期就可以了</p>
+<h2 id="界面分析"><a href="#界面分析" class="headerlink" title="界面分析"></a>界面分析</h2><p>最好是插入网线，开机进入Unraid OS，等待系统开机，会出现一个ip地址，再通过其他电脑浏览器，输入ip地址，进入网页版管理界面，当然也可以直接进入Unraid GUI，直接在原机器上操作。但我更倾向于用其他电脑浏览器操作。</p>
+<h2 id="挂载硬盘"><a href="#挂载硬盘" class="headerlink" title="挂载硬盘"></a>挂载硬盘</h2><p>我这里有两块硬盘，分别为500G，设置disk1挂载其中一个硬盘，挂载diak2位另外一个硬盘</p>
+<h2 id="设置Plex"><a href="#设置Plex" class="headerlink" title="设置Plex"></a>设置Plex</h2><p>安装官方插件中心</p>
+<h2 id="设置VM虚拟机"><a href="#设置VM虚拟机" class="headerlink" title="设置VM虚拟机"></a>设置VM虚拟机</h2><p>To be continue..</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2020/03/14/DIY%E8%A3%85%E6%9C%BA%E6%8C%87%E5%8D%97/" class="prev">PREV</a><a href="/2020/03/14/vpn/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'nohotpot';
+var disqus_identifier = '2020/03/14/Unraid/';
+var disqus_title = 'Unraid';
+var disqus_url = 'https://nohotpot.github.io/2020/03/14/Unraid/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//nohotpot.disqus.com/count.js" async></script><div class="copyright"><p>© 2020 <a href="https://nohotpot.github.io">Yc</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>

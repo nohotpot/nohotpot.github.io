@@ -1,0 +1,68 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Google cloud platform · noHotpot</title><meta name="description" content="Google cloud platform - Yc"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/nine.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://nohotpot.github.io/atom.xml" title="noHotpot"><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="noHotpot" type="application/atom+xml">
+</head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/nine.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="http://instagram.com/no_hotpot" target="_blank" class="nav-list-link">INSTAGRAM</a></li><li class="nav-list-item"><a href="https://github.com/gitjohnhub" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="https://gitjohnhub.github.io" target="_blank" class="nav-list-link">网盘</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">Google cloud platform</h1><div class="post-info">Mar 14, 2020</div><div class="post-content"><h1 id="谷歌服务器搭建vpn"><a href="#谷歌服务器搭建vpn" class="headerlink" title="谷歌服务器搭建vpn"></a>谷歌服务器搭建vpn</h1><h2 id="什么是VPN"><a href="#什么是VPN" class="headerlink" title="什么是VPN"></a>什么是VPN</h2><p>我们访问不了google，是因为被zf封锁了，也就是俗称的被墙，那么如何绕过墙的限制呢？这就需要vpn了。什么是vpn？</p>
+<p>通俗来说，你在国内访问不了google，但是假设你有一个外国的小伙伴，你们经常微信联系，外国的小伙伴是可以访问google的，那么你只需要告诉你的小伙伴你需要google什么东西，然后让外国小伙伴拍照通过微信发给你，这样你不就能看到google到的东西了吗？这个小伙伴就是你的vpn。</p>
+<p>最近google云计算平台针对大陆有了优化政策，注册白送$300，买个服务器完全不要钱= =基本上可以白嫖一年服务器，理想情况下一年之后注销账号重新注册无限白嫖，有了这台服务器我们就可以搭建vpn啦，那么如何在google家的服务器上搞事情呢？</p>
+<h2 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h2><p>1.需要一张visa卡，会预付¥30检测卡状态，会立刻退还，全程不花一分钱<br>2.翻墙状态下进行</p>
+<h2 id="注册流程"><a href="#注册流程" class="headerlink" title="注册流程"></a>注册流程</h2><p>1.点击 <a href="https://cloud.google.com/free/?hl=zh-cn" target="_blank" rel="noopener">google cloud platform网址</a> </p>
+<p><img src="vpn/rId25.png" alt="vpn/rId25.png"></p>
+<p>2.输入你自己的google账号<br>3.地区选择“台湾”，勾选服务条款</p>
+<p><img src="vpn/rId26.png" alt="vpn/rId26.png"></p>
+<p>4.账号类型选择“个人”，税务信息选择“未登记的个人”，地址随便输，但是邮编必须和选择市区的邮编一致，具体可以在网上查询，这里我选择“台北市中山区”，邮编是“10441”，剩下随便瞎填就可以</p>
+<p><img src="vpn/rId27.png" alt="vpn/rId27.png"></p>
+<p>5.信用卡信息填写完整，取消勾选后续自动扣款，google已经注明不会自动收费，然后选择“开始免费试用，白嫖开始</p>
+<h2 id="配置google服务器"><a href="#配置google服务器" class="headerlink" title="配置google服务器"></a>配置google服务器</h2><p>1.在侧边菜单栏中选择Compute Engine，VM实例</p>
+<p><img src="vpn/rId29.png" alt="vpn/rId29.png"></p>
+<p>2.选择“创建实例”</p>
+<p><img src="vpn/rId30.png" alt="vpn/rId30.png"></p>
+<p>3.点击“区域”，更改成“aisa-east1台湾”，地区选择c</p>
+<p><img src="vpn/rId31.png" alt="vpn/rId31.png"></p>
+<p>4.勾选“允许HTTP流量”和“允许HTTPS流量”</p>
+<p><img src="vpn/rId32.png" alt="vpn/rId32.png"></p>
+<p>5.点击创建<br>6.选择 右侧边菜单栏-vpc网络-外部ip地址</p>
+<p><img src="vpn/rId33.png" alt="vpn/rId33.png"></p>
+<p>7.将ip地址改为静态，名称随意</p>
+<p><img src="vpn/rId34.png" alt="vpn/rId34.png"></p>
+<p><img src="vpn/rId35.png" alt="vpn/rId35.png"></p>
+<p>9.点击保留，此操作是为了防止重启的时候服务器ip地址改变</p>
+<p>10.右侧边菜单栏-Computer engine-VM实例，记下ip地址，然后点击实例旁边的ssh</p>
+<p><img src="vpn/rId36.png" alt="vpn/rId36.png"></p>
+<p>11.点击ssh，会出现如下操作窗口：</p>
+<p><img src="vpn/rId37.png" alt="vpn/rId37.png"></p>
+<p>12.在命令行中输入sudo -i，回车（这步切换成root用户，即获得完全控制权）</p>
+<p><img src="vpn/rId38.png" alt="vpn/rId38.png"></p>
+<p>后面所有命令行都在此窗口#后面输入即可</p>
+<h2 id="服务器端vpn配置"><a href="#服务器端vpn配置" class="headerlink" title="服务器端vpn配置"></a>服务器端vpn配置</h2><p>1.安装v2ray脚本</p>
+<pre><code>#安装v2ray脚本
+bash &lt;(curl -L -s https://install.direct/go.sh)</code></pre><p><img src="vpn/rId40.png" alt="vpn/rId40.png"></p>
+<pre><code>#查看默认配置，记下port端口号和id
+cat /etc/v2ray/config.json</code></pre><p><img src="vpn/rId41.png" alt="vpn/rId41.png"></p>
+<pre><code>#开始运行v2ray
+ service v2ray start</code></pre><p><img src="vpn/rId42.png" alt="vpn/rId42.png"></p>
+<h2 id="客户端vpn配置"><a href="#客户端vpn配置" class="headerlink" title="客户端vpn配置"></a>客户端vpn配置</h2><p>将记下的ip地址，端口号和id填入支持vmess协议的代理软件，比如shadowsocks</p>
+<p>右上角添加节点</p>
+<p><img src="vpn/rId43.png" alt="vpn/rId43.png"></p>
+<p>填入节点信息</p>
+<p>1.服务器填入ip地址</p>
+<p>2.端口填入刚才记下的服务器端口</p>
+<p>3.UUID填写刚才记下的id</p>
+<p>其他均为默认，点击完成，打开vpn开关，打开google测试</p>
+<p><img src="vpn/rId44.png" alt="vpn/rId44.png"></p>
+<h2 id="添加规则，加速网络"><a href="#添加规则，加速网络" class="headerlink" title="添加规则，加速网络"></a>添加规则，加速网络</h2><p>但是有个问题在于，可能你的所有访问都是通过服务器访问的，比如你访问百度，本来是可以直接访问，但是现在可能会先翻墙出去，再翻回来，增加了延迟时间，没有必要，这时候就需要规则判定，让本来就能直接访问的网站走直接通道，让被墙的网站走代理服务器，这样做的好处除了增加访问速度，也可以24小时开启vpn。</p>
+<p>在shadowsocks-底部标签页的“配置”中，点击右上家+号，在“url下载配置”中填入以下url</p>
+<p>（这是神机规则，由万能的网友配置，其中不仅设置了代理规则，还设置了各种广告屏蔽规则，比如微博知乎内置广告会被屏蔽）</p>
+<p><a href="https://raw.githubusercontent.com/lhie1/Rules/master/Shadowrocket/Complete.conf" target="_blank" rel="noopener">https://raw.githubusercontent.com/lhie1/Rules/master/Shadowrocket/Complete.conf</a></p>
+<p>点击下载，选择该配置</p>
+<p><img src="vpn/rId45.png" alt="vpn/rId45.png"></p>
+<p><img src="vpn/rId46.png" alt="vpn/rId46.png"></p>
+<p>确保首页中全局路由选择了“配置</p>
+<p><img src="vpn/rId47.png" alt="vpn/rId47.png"></p>
+<p>打开vpn开关，愉快上网</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2020/03/14/Unraid/" class="prev">PREV</a><a href="/2020/03/14/Git%E5%AD%A6%E4%B9%A0/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'nohotpot';
+var disqus_identifier = '2020/03/14/vpn/';
+var disqus_title = 'Google cloud platform';
+var disqus_url = 'https://nohotpot.github.io/2020/03/14/vpn/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//nohotpot.disqus.com/count.js" async></script><div class="copyright"><p>© 2020 <a href="https://nohotpot.github.io">Yc</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>

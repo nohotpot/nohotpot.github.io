@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> DIY装机指南 · noHotpot</title><meta name="description" content="DIY装机指南 - Yc"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/nine.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://nohotpot.github.io/atom.xml" title="noHotpot"><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="noHotpot" type="application/atom+xml">
+</head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/nine.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="http://instagram.com/no_hotpot" target="_blank" class="nav-list-link">INSTAGRAM</a></li><li class="nav-list-item"><a href="https://github.com/gitjohnhub" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="https://gitjohnhub.github.io" target="_blank" class="nav-list-link">网盘</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">DIY装机指南</h1><div class="post-info">Mar 14, 2020</div><div class="post-content"><h1 id="计算机小白安装指南"><a href="#计算机小白安装指南" class="headerlink" title="计算机小白安装指南"></a>计算机小白安装指南</h1><p>由于电脑接线太多，很多小白一开始上手搞不清楚，坏了也不会排查问题，除了多喝热水重启一下，还能做什么呢？其实所有计算机里的东西，都是模块化的，每个模块存在都是人类超级智慧的结晶，不论什么计算机，来来回回都是那几样，硬盘，显卡，cpu等等。计算机是一个很广泛的概念，只要弄懂了以上模块，很多电子设备都一样。<br>除了个人电脑，笔记本，比如路由器，你也可以看成计算机，只是没有显示器，我们看一下路由器上的网口和计算机不是一样的吗？<br>除了路由器，手机也是一样的，有显示器，里面有个很小的硬盘，很小的内存条，很小的cpu。<br>所以如果看懂了下面台式机基础，升级或者自己DIY一台电脑，实际上更省成本，甚至于家里闲置的老旧笔记本，不能流畅运行windows，也可以流畅运行其他系统（世界上并不是只有windows系统，还有macOS苹果电脑系统，Linux系统等等，后面会说区分）。<br>比如刚才说的路由器，它是一个计算机，那我可以把路由器的系统装在老旧笔记本上让它变成路由器吗？答案是可以的，并且，笔记本再老旧，比路由器的性能还是高出几个level的，完全可以废物利用，发光发热。</p>
+<h1 id="理论部分"><a href="#理论部分" class="headerlink" title="理论部分"></a>理论部分</h1><p>越来越多人喜欢DIY自己的主机，但是各种型号是否适配看的眼花缭乱，正好最近自己配了台主机，梳理一下过程。<br>大部分小白混乱的原因，主要是接口命名的不同，比如PCIe接口，DDR4接口，SATA接口，下文都会梳理，为什么不能统一用一个接口？理论上可以，比如最新出来的M.2接口，有些硬盘，网卡都做成了M.2接口，但主要是因为计算机发展初期，对接口速度要求各不相同，没必要杀鸡用牛刀，所以出现了很多接口标准，甚至于几乎所有硬件设备的连接接口都不一样。<br>如果需要diy一台计算机，通俗来说，硬盘就像人类大脑的长期记忆部分，内存条就像人类大脑的短时记忆部分，显卡就是连接显示器，显示图像桌面，主板就像人类的躯干，连接各个设备，cpu是人类大脑的计算部分，电源就不用说了，计算机的硬件设备有以下几种：</p>
+<ul>
+<li><p>硬盘：用来存储数据，通俗来说，如果你安装的是windows系统，系统文件，你的文档视频图片，都会存储在这个叫硬盘的东西上。</p>
+</li>
+<li><ul>
+<li>硬盘的分类<br>从接口分类，接口的概念其实很常见，type-c，苹果充电线上的lightening，都是接口，硬盘上的接口有IDE，SATA，M.2<br>为什么市面上有很多种不同接口的硬盘？这就要说到数据的读写速度，我们都知道网速的概念，其实硬盘内的数据读写也可以看成网速，为了追求速度，我们改变了接口类型，加快了读写速度，接口主要有以下三种：</li>
+</ul>
+</li>
+<li><p>** IDE，比较老式</p>
+</li>
+<li><p>** SATA，常见，现在大部分是这种</p>
+</li>
+<li><p>** M.2，如果你是游戏发烧友，可以选择这种，读写速度比SATA快<br>从是否机械还是固态来分<br>机械硬盘（SATA接口）：机械硬盘内部和唱片非常相似，里面有张碟片，就像唱片一样，通过旋转来读取数据，特点就是比较大，目前电脑大部分标配这种。<br>固态硬盘（SATA接口）：内部类似u盘内部，是芯片式的存储，比机械硬盘小很多，读取速度也快，所以游戏玩家会选择这种。尤其是如果你发现你台式机装了机械硬盘运行缓慢，换成固态硬盘，通常有显著提升。但是这种的缺点就是贵，通常是在1.5元/GB。<br>固态硬盘（M.2接口）：由于是M.2接口，读写速度更快，缺点当然是更贵了，而且这种接口比较新式，买之前需要看下主板是否写了支持M.2接口。</p>
+</li>
+<li><p>内存条：很多小白会把内存条和硬盘的概念弄混，<br>内存实际上是短时记忆，重启电脑内存里的数据就会被清空。为什么我们不直接读取硬盘里的内容显示，而是先把数据放到内存里再显示呢？其实为了速度，相比于动不动就去问硬盘要数据，读取内存其实更快，尤其是机械硬盘读取数据，通常碟片要转好多圈才能找到数据，所以就加了内存这样一个东西。内存的分类有以下几种，主要也是因为读写速度的提升，接口改变了而已，不要因为专有名词而混乱，其实就只是这种接口叫做DDR3或者DDR4，想象成type-c就行，DDR3长成下面这样：</p>
+</li>
+<li><ul>
+<li>DDR3，目前常见</li>
+</ul>
+</li>
+<li><ul>
+<li>DDR4，比DDR3读写更快，互不兼容（也就是你不能把DDR4插入支持DDR3的设备）。</li>
+</ul>
+</li>
+<li><p>CPU<br>市面上两大主流cpu，Intel和AMD。<br>cpu是一个小方块，长下面这样，因为上面有很多针，也叫针脚接口，虽然都是小方块，但是针脚接口完全不一样，如果你在淘宝上面买，通常会看到一些比如LGA 1155，LGA1150，这些就是接口型号了。</p>
+</li>
+<li><p>因为cpu是装在主板上的，所以购买主板时也要看清主板标明支持哪些cpu型号，*比如淘宝上，选择一块主板，跳到参数部分，看到cpu部分，通常会写支持的cpu接口</p>
+</li>
+</ul>
+<p>To be continue..</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2020/03/14/Unraid/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'nohotpot';
+var disqus_identifier = '2020/03/14/DIY装机指南/';
+var disqus_title = 'DIY装机指南';
+var disqus_url = 'https://nohotpot.github.io/2020/03/14/DIY装机指南/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//nohotpot.disqus.com/count.js" async></script><div class="copyright"><p>© 2020 <a href="https://nohotpot.github.io">Yc</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
